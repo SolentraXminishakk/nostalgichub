@@ -4,8 +4,9 @@ Library.__index = Library
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
+local coreUI = game:GetService("CoreGui")
 
-local templatesFolder = ReplicatedStorage:FindFirstChild("__NostalgicTemplates") or Instance.new("Folder", ReplicatedStorage)
+local templatesFolder = coreUI:FindFirstChild("__NostalgicTemplates") or Instance.new("Folder", coreUI)
 templatesFolder.Name = "__NostalgicTemplates"
 
 -- helper to find descendant by name inside templates (safe, uses first match)
